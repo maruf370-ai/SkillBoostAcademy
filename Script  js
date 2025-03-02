@@ -1,0 +1,12 @@
+document.getElementById("leadForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+
+    if (name && email) {
+        document.getElementById("responseMessage").innerText = "Thank you, " + name + "! We will contact you soon.";
+        document.getElementById("leadForm").reset();
+    } else {
+        document.getElementById("responseMessage").innerText = "Please enter a valid name and email.";
+    }
+});
